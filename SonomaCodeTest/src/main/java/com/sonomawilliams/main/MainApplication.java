@@ -36,8 +36,12 @@ public class MainApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		
 		// TODO Auto-generated method stub
 		String testData= "[94133,94133] [94200,94299] [94226,94399] [94400,94499] [94426,94599] ";
+		
+		if(args==null || args.length==0)
+		 testData= args.toString();
 		//String testData= "";
 		 List<ZipCodeRange> extractedZipRanges = zipCodeRangeProcessor.extractZipCodeRanges(testData,ZipCodeRangeConstants.SQUARE_BRKT_REGEX);
 	     
