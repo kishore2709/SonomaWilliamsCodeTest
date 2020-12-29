@@ -33,4 +33,5 @@ Your work will be evaluated against the following criteria:
 - Design choices and overall code organization
 - Code quality and best practices
 
-Run the jar file with command line args or enter test data as input string
+Run the jar file with command line args or enter test data as input string. 
+Run MainApplication.java in the package "com.sonomawilliams.main"
