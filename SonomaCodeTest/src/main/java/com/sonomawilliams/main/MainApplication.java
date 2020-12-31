@@ -18,7 +18,7 @@ import com.sonomawilliams.util.ZipCodeRangeConstants;
 @ComponentScan(basePackages = "com.sonomawilliams")
 public class MainApplication implements CommandLineRunner {
 
-	private static Logger LOG = LoggerFactory
+	private static final Logger LOG = LoggerFactory
 		      .getLogger(MainApplication.class);
 	
 	@Autowired
@@ -40,9 +40,7 @@ public class MainApplication implements CommandLineRunner {
 		// TODO Auto-generated method stub
 		String testData= "[94133,94133] [94200,94299] [94226,94399] [94400,94499] [94426,94599] ";
 		
-		if(args==null || args.length==0)
-		 testData= args.toString();
-		//String testData= "";
+		
 		 List<ZipCodeRange> extractedZipRanges = zipCodeRangeProcessor.extractZipCodeRanges(testData,ZipCodeRangeConstants.SQUARE_BRKT_REGEX);
 	     
 		 List<ZipCodeRange> finalMergedZipRanges = zipCodeRangeProcessor.mergeZipCodeRanges(extractedZipRanges);
